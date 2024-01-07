@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<div class="container">
+    <div id="deviceList">
+        <span class="material-symbols-outlined">
+            check_circle
+            </span>
+        @for (device of testDevices; track $index) {
+            <h5>{{device.name}}</h5>
+            <p><span class="material-symbols-outlined">
+                battery_full_alt
+                </span>{{device.battery}}%</p>
+            {{device.name}}
+            {{device.battery}}%
+            {{device.level}}%
+        }
+    </div>
+
+    <button type="button" (click)="GenerateData()">Generate data</button>
+</div>
